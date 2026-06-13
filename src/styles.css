@@ -1,0 +1,523 @@
+:root {
+  color: #17202a;
+  background: #f6f8fb;
+  font-family:
+    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+button,
+a {
+  cursor: pointer;
+}
+
+.app-shell {
+  min-height: 100vh;
+  padding-bottom: 48px;
+}
+
+.hero-band {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.95fr);
+  gap: 36px;
+  align-items: center;
+  min-height: 78vh;
+  padding: 48px clamp(20px, 6vw, 84px) 42px;
+  color: #f8fbff;
+  background:
+    linear-gradient(120deg, rgba(8, 30, 48, 0.92), rgba(24, 84, 88, 0.78)),
+    url("https://images.unsplash.com/photo-1570125909232-eb263c188f7e?auto=format&fit=crop&w=1800&q=80")
+      center / cover;
+}
+
+.hero-copy {
+  max-width: 720px;
+}
+
+.eyebrow,
+.hero-actions,
+.section-heading,
+.ticket-top,
+.metric,
+.status-card,
+.route-card,
+.submit-button,
+.ticket-card button {
+  display: flex;
+  align-items: center;
+}
+
+.eyebrow {
+  width: fit-content;
+  gap: 8px;
+  padding: 8px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.12);
+  font-weight: 700;
+}
+
+h1 {
+  max-width: 760px;
+  margin: 18px 0 16px;
+  font-size: clamp(42px, 7vw, 82px);
+  line-height: 0.98;
+  letter-spacing: 0;
+}
+
+.hero-copy p {
+  max-width: 650px;
+  margin: 0;
+  color: #dce9ef;
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.hero-actions {
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.primary-action,
+.ghost-action,
+.submit-button,
+.ticket-card button {
+  min-height: 46px;
+  gap: 10px;
+  border-radius: 8px;
+  border: 0;
+  padding: 12px 18px;
+  text-decoration: none;
+  font-weight: 800;
+}
+
+.primary-action,
+.submit-button {
+  background: #2bd4a8;
+  color: #06291f;
+}
+
+.ghost-action {
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.hero-visual {
+  display: grid;
+  gap: 18px;
+  justify-items: end;
+}
+
+.transit-map {
+  position: relative;
+  width: min(100%, 520px);
+  aspect-ratio: 1.18;
+  overflow: hidden;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  background:
+    linear-gradient(90deg, transparent 49%, rgba(255, 255, 255, 0.2) 50%, transparent 51%),
+    linear-gradient(0deg, transparent 49%, rgba(255, 255, 255, 0.18) 50%, transparent 51%),
+    rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(5px);
+}
+
+.transit-map::before {
+  position: absolute;
+  inset: 20% 12%;
+  content: "";
+  border: 6px solid #2bd4a8;
+  border-left-color: #ffcf5a;
+  border-radius: 999px;
+}
+
+.station {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border: 5px solid #ffffff;
+  border-radius: 50%;
+  background: #2bd4a8;
+}
+
+.station-a {
+  left: 18%;
+  top: 25%;
+}
+
+.station-b {
+  right: 21%;
+  top: 18%;
+}
+
+.station-c {
+  right: 18%;
+  bottom: 25%;
+}
+
+.station-d {
+  left: 25%;
+  bottom: 18%;
+}
+
+.map-bus {
+  position: absolute;
+  left: 48%;
+  top: 44%;
+  color: #ffcf5a;
+  filter: drop-shadow(0 12px 20px rgba(0, 0, 0, 0.3));
+}
+
+.hero-pass {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: min(100%, 360px);
+  padding: 18px;
+  border-radius: 8px;
+  color: #11242e;
+  background: #ffffff;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.24);
+}
+
+.hero-pass span,
+.route-card p,
+.fare-box p,
+.status-card span,
+.metric span,
+.ticket-top span,
+.ticket-card p,
+.empty-state p {
+  color: #60717c;
+}
+
+.hero-pass strong,
+.hero-pass span {
+  display: block;
+}
+
+.metrics-strip,
+.workspace-grid,
+.operations-band,
+.ticket-history {
+  width: min(1180px, calc(100% - 32px));
+  margin: 24px auto 0;
+}
+
+.metrics-strip {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.metric,
+.status-card {
+  min-height: 116px;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+  border: 1px solid #dfe7ee;
+  border-radius: 8px;
+  background: #ffffff;
+  text-align: center;
+}
+
+.metric svg,
+.status-card svg {
+  color: #18736b;
+}
+
+.workspace-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(300px, 0.8fr);
+  gap: 24px;
+  align-items: start;
+}
+
+.booking-panel,
+.route-panel,
+.operations-band,
+.ticket-history {
+  border: 1px solid #dfe7ee;
+  border-radius: 8px;
+  background: #ffffff;
+  padding: 24px;
+}
+
+.section-heading {
+  justify-content: space-between;
+  gap: 14px;
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.booking-panel {
+  display: grid;
+  gap: 16px;
+}
+
+label {
+  display: grid;
+  gap: 8px;
+  color: #334651;
+  font-weight: 800;
+}
+
+input,
+select {
+  width: 100%;
+  min-height: 46px;
+  border: 1px solid #cad7df;
+  border-radius: 8px;
+  padding: 10px 12px;
+  color: #17202a;
+  background: #fbfdff;
+}
+
+input:focus,
+select:focus,
+button:focus-visible,
+a:focus-visible {
+  outline: 3px solid rgba(43, 212, 168, 0.35);
+  outline-offset: 2px;
+}
+
+.pass-options {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.pass-options button {
+  min-height: 44px;
+  border: 1px solid #cad7df;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #30424c;
+  font-weight: 800;
+}
+
+.pass-options .active {
+  border-color: #18736b;
+  color: #082c28;
+  background: #dff8f0;
+}
+
+.fare-box {
+  display: grid;
+  gap: 10px;
+  border-radius: 8px;
+  padding: 18px;
+  background: #f0fbf7;
+  border: 1px solid #b6eadb;
+}
+
+.fare-box div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.fare-box span {
+  font-weight: 900;
+}
+
+.fare-box strong {
+  font-size: 32px;
+}
+
+.fare-box p,
+.operations-band p,
+.ticket-card p,
+.empty-state p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+.route-card {
+  gap: 14px;
+  padding: 16px;
+  border-radius: 8px;
+  background: #f7fafc;
+}
+
+.route-card h2 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.route-card p {
+  margin: 3px 0 0;
+}
+
+.route-line {
+  width: 4px;
+  height: 62px;
+  margin-left: 26px;
+  background: #2bd4a8;
+}
+
+.route-data {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 12px;
+  margin-top: 20px;
+  padding-top: 18px;
+  border-top: 1px solid #e5edf2;
+}
+
+.operations-band {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(320px, 1.2fr);
+  gap: 26px;
+  align-items: center;
+}
+
+.operations-band p {
+  color: #556873;
+}
+
+.load-control {
+  display: grid;
+  gap: 14px;
+}
+
+.cloud-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.status-card {
+  min-height: 108px;
+}
+
+.ticket-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 14px;
+}
+
+.ticket-card {
+  display: grid;
+  gap: 14px;
+  border: 1px solid #dfe7ee;
+  border-radius: 8px;
+  padding: 16px;
+  background: #fbfdff;
+}
+
+.ticket-top {
+  justify-content: space-between;
+}
+
+.ticket-top strong,
+.ticket-top span {
+  display: block;
+}
+
+.ticket-meta {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  color: #334651;
+  font-weight: 800;
+}
+
+.ticket-card button {
+  justify-content: center;
+  border: 1px solid #cad7df;
+  background: #ffffff;
+  color: #17202a;
+}
+
+.empty-state {
+  display: grid;
+  place-items: center;
+  gap: 10px;
+  min-height: 180px;
+  border: 1px dashed #b7c6d1;
+  border-radius: 8px;
+  text-align: center;
+}
+
+@media (max-width: 920px) {
+  .hero-band,
+  .workspace-grid,
+  .operations-band {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-visual {
+    justify-items: stretch;
+  }
+
+  .metrics-strip,
+  .cloud-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 620px) {
+  .hero-band {
+    min-height: auto;
+    padding-top: 34px;
+  }
+
+  h1 {
+    font-size: 42px;
+  }
+
+  .metrics-strip,
+  .pass-options,
+  .cloud-grid,
+  .ticket-meta {
+    grid-template-columns: 1fr;
+  }
+
+  .booking-panel,
+  .route-panel,
+  .operations-band,
+  .ticket-history {
+    padding: 18px;
+  }
+}
+
+@media print {
+  .hero-band,
+  .metrics-strip,
+  .workspace-grid,
+  .operations-band,
+  .section-heading,
+  .empty-state {
+    display: none;
+  }
+
+  .ticket-history {
+    border: 0;
+  }
+}
