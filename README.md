@@ -7,7 +7,7 @@ Cloud-Based Bus Pass System is a React + Firebase web application for booking se
 
 Add your deployed free cloud URL here after deployment:
 
-**Live Demo:** `https://code-alpha-cloud-based-bus-pass-sys.vercel.app/`
+**Live Demo:** [`https://code-alpha-cloud-based-bus-pass-sys.vercel.app/`]
 
 Recommended free hosting: [Vercel](https://vercel.com/) for always-on static hosting. Optional database/cloud integration: [Firebase Firestore](https://firebase.google.com/products/firestore) free Spark plan.
 
