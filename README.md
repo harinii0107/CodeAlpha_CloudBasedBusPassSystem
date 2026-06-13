@@ -1,3 +1,4 @@
+
 # CodeAlpha_CloudBasedBusPassSystem
 
 Cloud-Based Bus Pass System is a React + Firebase web application for booking secure digital bus passes. It prevents ticket loss through QR-based digital passes, protects users from incorrect pricing with route-based fare validation, and demonstrates autoscaling behavior for high-traffic booking windows.
@@ -6,7 +7,7 @@ Cloud-Based Bus Pass System is a React + Firebase web application for booking se
 
 Add your deployed free cloud URL here after deployment:
 
-**Live Demo:** `https://your-vercel-project-url.vercel.app`
+**Live Demo:** `https://code-alpha-cloud-based-bus-pass-sys.vercel.app/`
 
 Recommended free hosting: [Vercel](https://vercel.com/) for always-on static hosting. Optional database/cloud integration: [Firebase Firestore](https://firebase.google.com/products/firestore) free Spark plan.
 
